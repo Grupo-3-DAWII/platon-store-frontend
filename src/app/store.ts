@@ -47,7 +47,7 @@ export class Catalog {
     this.loading.set(true);
     this.error.set("");
     const page = (index: number) =>
-      this.http.get<Page<Product>>("/api/products/catalog", {
+      this.http.get<Page<Product>>("/api/products", {
         params: new HttpParams().set("page", index).set("size", 100),
       });
     page(0)
